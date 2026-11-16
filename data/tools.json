@@ -8,7 +8,7 @@
     "code_license": "MIT",
     "site_url": "https://tools.freeaivideo.app",
     "repo_url": "https://github.com/lian-yang/awesome-free-ai-generation",
-    "notes": "Confidence: high = read from an official pricing/help page; medium = consistent third-party or partially official; low = single third-party source. Items marked 'conflict' have contradictory official sources — verify by testing your own account before relying on them."
+    "notes": "Confidence: high = read from an official pricing/help page; medium = consistent third-party or partially official; low = single third-party source. Items marked 'conflict' have contradictory official sources: verify by testing your own account before relying on them."
   },
   "categories": {
     "image": "AI Image Generation",
@@ -86,8 +86,8 @@
       "url": "https://ideogram.ai",
       "category": "image",
       "status": "active",
-      "free_tier": { "allowance": "30 credits/week", "refresh": "weekly", "notes": "Public outputs, JPG downloads. Late-2026 signals suggest a pay-as-you-go transition (~1¢/credit) — unconfirmed" },
-      "signup": { "required": true, "method": "Google / Apple (confirmed); Microsoft (official docs self-contradict); email signup gets NO credits", "notes": "conflict" },
+      "free_tier": { "allowance": "30 credits/week (reported in docs; amount not confirmed on the quick-start page)", "refresh": "weekly", "notes": "Public outputs, JPG downloads. Late-2026 signals suggest a pay-as-you-go transition (~1¢/credit) — unconfirmed" },
+      "signup": { "required": true, "method": "Google / Apple confirmed; email signups get NO credits (official quick-start); Microsoft eligibility inconsistent across official pages", "notes": "" },
       "api": { "available": true, "free_tier": false, "notes": "Paid" },
       "commercial_use": { "allowed": "unclear", "notes": "" },
       "verification_date": "2026-11-17",
@@ -204,13 +204,12 @@
       "url": "https://app.klingai.com",
       "category": "video",
       "status": "active",
-      "free_tier": { "allowance": "≈66 credits/day via daily check-in (≈2× 5s standard videos)", "refresh": "daily", "notes": "Standard (slow) queue only; watermarked. CONFLICT: recent third-party reports say daily login credits are now limited to a subscriber promotion, so verify with your own account" },
+      "free_tier": { "allowance": "Subscriber-only daily login credits during events (amount per platform announcements); free users' daily credits unclear (historically ~66/day)", "refresh": "daily (subscribers only)", "notes": "Official point policy 2026-11: daily login credits limited to subscribers during an event; $1 = 66 credits is the purchase price, not the free amount. Standard queue only; watermarked" },
       "signup": { "required": true, "method": "email / Google", "notes": "" },
       "api": { "available": true, "free_tier": false, "notes": "Paid" },
       "commercial_use": { "allowed": "no", "notes": "Free tier watermarked" },
       "verification_date": "2026-11-17",
-      "confidence": "medium",
-      "flags": ["conflict"],
+      "confidence": "high",
       "sources": ["https://kling.ai/docs/point-policy", "https://kling.ai/explore/kling_ai_daily_free_credits"]
     },
     {
@@ -377,7 +376,7 @@
       "free_tier": { "allowance": "100 credits/month, reset monthly", "refresh": "monthly", "notes": "Free downloads have model & count limits" },
       "signup": { "required": true, "method": "email / Google", "notes": "" },
       "api": { "available": true, "free_tier": false, "notes": "Paid (Pro+, prepaid credits)" },
-      "commercial_use": { "allowed": "yes_with_attribution", "notes": "Free tier outputs are CC BY 4.0 — commercial use allowed with attribution (the only confirmed free-commercial player here)" },
+      "commercial_use": { "allowed": "yes_with_attribution", "notes": "Free tier outputs are CC BY 4.0: commercial use allowed with attribution (the only confirmed free-commercial player here)" },
       "verification_date": "2026-11-17",
       "confidence": "high",
       "sources": ["https://help.meshy.ai/en/articles/15696428-what-is-included-on-the-free-plan", "https://docs.meshy.ai/en/api/pricing"]
@@ -387,13 +386,12 @@
       "url": "https://www.tripo3d.ai",
       "category": "three_d",
       "status": "active",
-      "free_tier": { "allowance": "200 credits/month reset (≈13 models)", "refresh": "monthly", "notes": "CONFLICT: official docs (2026-10) license table reads as free outputs usable commercially WITH attribution while IP stays with Tripo; several directories read it as non-commercial. Read the current license table before commercial use" },
+      "free_tier": { "allowance": "200 credits/month reset (HD model = 15 credits)", "refresh": "monthly", "notes": "3D export limited to H2.5; Image Generation has no free quota; Smart Mesh P2.0 and Smart UV get 2 trials" },
       "signup": { "required": true, "method": "email / Google", "notes": "" },
       "api": { "available": true, "free_tier": false, "notes": "Pay-as-you-go ≈$1/100 credits" },
-      "commercial_use": { "allowed": "conflict", "notes": "See free_tier notes" },
+      "commercial_use": { "allowed": "yes_with_attribution", "notes": "Official docs: free outputs usable commercially with attribution; IP belongs to Tripo. Paid plans get full commercial rights + ownership when private. Resolved from official pricing-credits doc 2026-11-17" },
       "verification_date": "2026-11-17",
-      "confidence": "medium",
-      "flags": ["conflict"],
+      "confidence": "high",
       "sources": ["https://www.tripo3d.ai/product-doc/getting-started/pricing-credits"]
     },
     {
@@ -479,7 +477,7 @@
       "url": "https://spline.design",
       "category": "three_d",
       "status": "no_free_tier",
-      "free_tier": { "allowance": "None — AI 3D generation is a paid-only feature (Hobby $15/mo+)", "refresh": null, "notes": "Free plan covers editor/library/web export only" },
+      "free_tier": { "allowance": "None: AI 3D generation is a paid-only feature (Hobby $15/mo+)", "refresh": null, "notes": "Free plan covers editor/library/web export only" },
       "signup": { "required": true, "method": "email / Google", "notes": "" },
       "api": { "available": false, "free_tier": false, "notes": "" },
       "commercial_use": { "allowed": null, "notes": "" },
