@@ -72,7 +72,7 @@ const html = `<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${esc(data.meta.title)}: Image, Video and 3D (Nov 2026)</title>
+<title>${esc(data.meta.title)} · Image, Video and 3D · Nov 2026</title>
 <meta name="description" content="${esc(data.meta.description)}">
 <link rel="canonical" href="${esc(data.meta.site_url)}/">
 <script type="application/ld+json">
