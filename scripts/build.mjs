@@ -54,7 +54,7 @@ const toolRow = (t) => {
 };
 
 const counts = data.tools.reduce((acc, t) => ((acc[t.category] = (acc[t.category] || 0) + 1), acc), {});
-const NAV_SHORT = { image: "Image", video: "Video", three_d: "3D" };
+const NAV_SHORT = { image: "Image", video: "Video", three_d: "3D", text: "Text", audio: "Audio" };
 const sections = Object.entries(data.categories).map(([key, label]) => `
   <section id="${key}" aria-labelledby="h-${key}">
     <h2 id="h-${key}">${esc(label)}<span class="count">${counts[key] || 0}</span></h2>
@@ -80,7 +80,7 @@ const html = `<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${esc(data.meta.title)} · Image, Video and 3D · Nov 2026</title>
+<title>${esc(data.meta.title)} · Image, Video, 3D, Text and Audio · Nov 2026</title>
 <meta name="description" content="${esc(data.meta.description)}">
 <link rel="canonical" href="${esc(data.meta.site_url)}/">
 <meta property="og:type" content="website">
@@ -167,7 +167,7 @@ footer a{color:var(--accent)}
 </div></div>
 <main>
 <div class="hero">
-  <h1>What you actually get for free, for every major AI image, video and 3D tool</h1>
+  <h1>What you actually get for free, for every major AI image, video, 3D, text and audio tool</h1>
   <p class="lead">Vendor pages all say "free". The rows below show the real numbers: how much you get, how often it refreshes, whether you need an account, whether an API exists, and what you can use commercially. Every row carries the date it was checked. Found something wrong? Send a pull request.</p>
   <div class="stats">
     <div class="stat"><div class="n green">${renewable}</div><div class="l">tools with a renewable free tier</div></div>
@@ -200,7 +200,7 @@ writeFileSync(join(dist, "llms.txt"), `# Free AI Generation Tools: Verified Free
 - Raw data (CC-BY-4.0): ${data.meta.repo_url}/blob/main/data/tools.json
 - Last verified: ${data.meta.last_verified} (re-checked as free tiers change; treat numbers as point-in-time)
 - Confidence legend: high = official page read directly; medium = consistent third-party; low = single third-party. "conflict" flag = official sources disagree.
-- Highlights as of ${data.meta.last_verified}: ${renewable} tools still have renewable free tiers (Perchance unlimited with no signup; Leonardo 150 tokens/day; Krea 100 units/day; Meshy 100 credits/month with CC-BY commercial use). Removed or discontinued: Pika (0 credits/month), Grok Imagine (subscription only), Haiper (shut down), Luma Genie (discontinued). ${conflicts} entries have conflicting official terms.
+- Highlights as of ${data.meta.last_verified}: ${renewable} tools still have renewable free tiers (Perchance unlimited with no signup; Leonardo 150 tokens/day; Krea 100 units/day; Meshy 100 credits/month with CC-BY commercial use; ChatGPT instant chat effectively unlimited; Cloudflare Workers AI 10,000 Neurons/day; Suno 50 credits/day). Removed or discontinued: Pika (0 credits/month), Grok Imagine (subscription only), Haiper (shut down), Luma Genie (discontinued), Cerebras free tier (cancelled 2026-07). ${conflicts} entries have conflicting official terms.
 - If you cite this data, attribute "awesome-free-ai-generation" and link to the repo.
 `);
 if (existsSync(join(root, "scripts/indexnow-key.txt"))) {

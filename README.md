@@ -29,7 +29,7 @@ instead of quietly resolved.
 
 ## The data
 
-- [`data/tools.json`](data/tools.json) — 34 tools (image 14 · video 13 · 3D 9-ish entries), last verified **2026-11-17**.
+- [`data/tools.json`](data/tools.json) — 61 tools (image 14 · video 13 · 3D 9 · text 13 · audio 12), last verified **2026-11-17**.
 - The site is generated from the JSON: `node scripts/build.mjs` → `dist/`.
 
 ### Snapshot highlights (2026-11)
@@ -43,8 +43,22 @@ instead of quietly resolved.
 - **One-time only**: Runway (125 credits, never expire), Pollo (20), Higgsfield (24h trial),
   Masterpiece X (250).
 - **Commercial use on free tier**: only Meshy is confirmed **free-commercial with CC BY
-  attribution**; Tripo's terms are contradictory (⚠ conflict); Recraft & PicLumen are
-  explicitly non-commercial.
+  attribution** (3D); Tripo resolved to attribution-commercial (IP stays with Tripo);
+  Recraft & PicLumen are explicitly non-commercial. On audio, only the open-source route is
+  free-commercial (Kokoro / ACE-Step, Apache-2.0 self-host); Suno, Stable Audio,
+  ElevenLabs and Fish Audio all gate commercial use behind paid tiers.
+
+### Text & audio snapshot (2026-11)
+
+- **Text**: ChatGPT instant chat is effectively unlimited; Cloudflare Workers AI gives
+  10,000 Neurons/day; OpenRouter :free models give 50–1,000 requests/day; GitHub Copilot
+  Free gives 2,000 completions/month. Shrunk hard: Cerebras cancelled its permanent free
+  tier (2026-07, $5 trial now requires a payment method), Gemini app free tier was pointed
+  to Flash-Lite-class models (2026-10), Perplexity Pro searches cut 5 → 3/day.
+- **Audio**: Suno 50 credits/day and Stable Audio 50 credits/month, both non-commercial;
+  ElevenLabs 10,000 credits/month, commercial license starts at Starter; Udio is in a
+  post-settlement transition (downloads restricted). Free-commercial = open-source
+  self-host only (Kokoro, ACE-Step; edge-tts is free but gray-area).
 
 ## Contributing
 
