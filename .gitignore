@@ -3,3 +3,7 @@ dist/
 .DS_Store
 .rankup/
 .oil-ui/
+.wrangler/
+wrangler.jsonc
+scripts/indexnow-key.txt
+.dev.vars
